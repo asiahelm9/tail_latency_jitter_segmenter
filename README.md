@@ -1,11 +1,11 @@
-# inferopt_jd000
+# tail_latency_jitter_segmenter
 
 **把大模型推理优化工程师·尾延迟抖动与首 token 时间切成可核查的片段并标出关键位置。**
 
-`inferopt_jd000` —— 把输入按语义边界切成独立单元，逐单元核对大模型推理优化工程师·尾延迟抖动与首 token 时间相关的特征并标出命中位置
+`tail_latency_jitter_segmenter` —— 把输入按语义边界切成独立单元，逐单元核对大模型推理优化工程师·尾延迟抖动与首 token 时间相关的特征并标出命中位置
 
 - 零依赖，Python 3.10+ 标准库即可运行
-- 单文件，`inferopt_jd000.py` 拷走就能用
+- 单文件，`tail_latency_jitter_segmenter.py` 拷走就能用
 - 不联网、不写文件
 
 ## 对应的岗位
@@ -23,16 +23,16 @@
 零依赖，Python 3.10+ 即可：
 
 ```bash
-pip install asiahelm9-inferopt_jd000
+pip install asiahelm9-tail_latency_jitter_segmenter
 ```
 
 装完直接用命令名调用：
 
 ```bash
-inferopt_jd000 --help
+tail_latency_jitter_segmenter --help
 ```
 
-也可以不用安装，直接把 `inferopt_jd000.py` 拷走用——它只依赖标准库。
+也可以不用安装，直接把 `tail_latency_jitter_segmenter.py` 拷走用——它只依赖标准库。
 
 ## 为什么需要它
 
@@ -47,9 +47,9 @@ inferopt_jd000 --help
 ## 用法
 
 ```bash
-python inferopt_jd000.py --file input.txt
-python inferopt_jd000.py --text "示例内容"
-python inferopt_jd000.py --file input.txt --json
+python tail_latency_jitter_segmenter.py --file input.txt
+python tail_latency_jitter_segmenter.py --text "示例内容"
+python tail_latency_jitter_segmenter.py --file input.txt --json
 ```
 
 加 `--json` 可以拿到机器可读的结果，便于接到流水线里。
@@ -62,7 +62,7 @@ python inferopt_jd000.py --file input.txt --json
 ## 跑测试
 
 ```bash
-python test_inferopt_jd000.py
+python test_tail_latency_jitter_segmenter.py
 ```
 
 测试用独立的断言与临时数据，不污染工作目录。
@@ -70,7 +70,7 @@ python test_inferopt_jd000.py
 ## 来源与参考
 
 - Python 标准库文档：<https://docs.python.org/3/>
-- GitHub 仓库：<https://github.com/asiahelm9/inferopt_jd000>
+- GitHub 仓库：<https://github.com/asiahelm9/tail_latency_jitter_segmenter>
 
 ---
 
@@ -79,7 +79,7 @@ python test_inferopt_jd000.py
 asiahelm9 做大模型推理优化工程师·尾延迟抖动与首 token 时间相关的问题，方向对标字节跳动的初级大模型推理优化工程师岗位。这个工具先替你回答一个具体问题，再谈别的。
 
 - 个人主页：<https://asiahelm9.github.io>
-- 仓库：<https://github.com/asiahelm9/inferopt_jd000>
+- 仓库：<https://github.com/asiahelm9/tail_latency_jitter_segmenter>
 
 ## 许可
 
